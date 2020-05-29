@@ -11,6 +11,8 @@
 		78F577FC248145FE00682508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F577FB248145FE00682508 /* Assets.xcassets */; };
 		78F577FF248145FE00682508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F577FD248145FE00682508 /* LaunchScreen.storyboard */; };
 		8A1770959AED90D2E365EEE4 /* Pods_TVShowManagerAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */; };
+		78F578122481507300682508 /* TVShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578112481507300682508 /* TVShowCell.swift */; };
+		78F578142481508200682508 /* TVShowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F578132481508200682508 /* TVShowCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		78F57800248145FE00682508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManagerAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A9885E81885CBEB290BBFB /* Pods-TVShowManagerAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManagerAssignment.release.xcconfig"; path = "Target Support Files/Pods-TVShowManagerAssignment/Pods-TVShowManagerAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		78F578112481507300682508 /* TVShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowCell.swift; sourceTree = "<group>"; };
+		78F578132481508200682508 /* TVShowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TVShowCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 		78F57806248146E100682508 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				78F5780C24814FB900682508 /* Modules */,
 				78F578082481476B00682508 /* Application */,
 			);
 			path = Source;
@@ -112,6 +117,47 @@
 				78F577FB248145FE00682508 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		78F5780C24814FB900682508 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				78F5780D24814FCD00682508 /* Option Select */,
+				78F5780E24814FD900682508 /* Add TV Show */,
+				78F5780F24814FE400682508 /* TV Show List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		78F5780D24814FCD00682508 /* Option Select */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Option Select";
+			sourceTree = "<group>";
+		};
+		78F5780E24814FD900682508 /* Add TV Show */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Add TV Show";
+			sourceTree = "<group>";
+		};
+		78F5780F24814FE400682508 /* TV Show List */ = {
+			isa = PBXGroup;
+			children = (
+				78F578102481505600682508 /* View */,
+			);
+			path = "TV Show List";
+			sourceTree = "<group>";
+		};
+		78F578102481505600682508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78F578112481507300682508 /* TVShowCell.swift */,
+				78F578132481508200682508 /* TVShowCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F578142481508200682508 /* TVShowCell.xib in Resources */,
 				78F577FF248145FE00682508 /* LaunchScreen.storyboard in Resources */,
 				78F577FC248145FE00682508 /* Assets.xcassets in Resources */,
 			);
@@ -228,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F578122481507300682508 /* TVShowCell.swift in Sources */,
 				78F577F3248145FD00682508 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

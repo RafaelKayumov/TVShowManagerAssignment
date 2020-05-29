@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VFk-gi-ZTq" customClass="TVShowCell" customModule="TVShowManagerAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="351" height="106"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VFk-gi-ZTq" id="B7w-B7-OdY">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faW-F4-ARe">
+                        <rect key="frame" x="20" y="15" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqd-7j-wlv">
+                        <rect key="frame" x="20" y="41" width="30.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y61-BR-FfS">
+                        <rect key="frame" x="20" y="64" width="102" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Rqd-7j-wlv" firstAttribute="top" secondItem="faW-F4-ARe" secondAttribute="bottom" constant="5" id="2ls-vC-AcS"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="faW-F4-ARe" secondAttribute="trailing" constant="20" id="ABV-up-Ncl"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rqd-7j-wlv" secondAttribute="trailing" constant="20" id="Dqn-gQ-cnZ"/>
+                    <constraint firstItem="y61-BR-FfS" firstAttribute="top" secondItem="Rqd-7j-wlv" secondAttribute="bottom" constant="5" id="ELx-eH-3Bc"/>
+                    <constraint firstItem="y61-BR-FfS" firstAttribute="top" secondItem="Rqd-7j-wlv" secondAttribute="bottom" constant="5" id="MMO-bm-Qlc"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y61-BR-FfS" secondAttribute="trailing" constant="20" id="Yda-56-7VG"/>
+                    <constraint firstItem="faW-F4-ARe" firstAttribute="top" secondItem="B7w-B7-OdY" secondAttribute="top" constant="15" id="i57-oi-hIP"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="y61-BR-FfS" secondAttribute="bottom" constant="15" id="lAO-ql-VKY"/>
+                    <constraint firstItem="faW-F4-ARe" firstAttribute="leading" secondItem="B7w-B7-OdY" secondAttribute="leading" constant="20" id="mKZ-mq-Q7F"/>
+                    <constraint firstItem="Rqd-7j-wlv" firstAttribute="leading" secondItem="B7w-B7-OdY" secondAttribute="leading" constant="20" id="mdS-LF-kTY"/>
+                    <constraint firstItem="y61-BR-FfS" firstAttribute="leading" secondItem="B7w-B7-OdY" secondAttribute="leading" constant="20" id="pES-Tp-org"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="numberOfSeasonsLabel" destination="y61-BR-FfS" id="jvn-JT-2mB"/>
+                <outlet property="releaseYearLabel" destination="Rqd-7j-wlv" id="LEQ-9i-j8C"/>
+                <outlet property="titleLabel" destination="faW-F4-ARe" id="ruE-xo-wTS"/>
+            </connections>
+            <point key="canvasLocation" x="-426.81159420289856" y="-13.392857142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
