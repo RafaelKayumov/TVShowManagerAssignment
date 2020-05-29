@@ -15,8 +15,11 @@ class AddTVShowViewController: UIViewController {
     @IBOutlet private weak var numberOfSeasonsTextField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
 
+    var output: AddTVShowViewOutput!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        output.onViewReady()
     }
 }

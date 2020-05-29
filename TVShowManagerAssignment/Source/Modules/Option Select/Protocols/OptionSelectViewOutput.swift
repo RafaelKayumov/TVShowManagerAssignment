@@ -1,5 +1,5 @@
 //
-//  AddTVShowViewOutput.swift
+//  OptionSelectViewOutput.swift
 //  TVShowManagerAssignment
 //
 //  Created by Rafael Kayumov on 29/05/2020.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol AddTVShowViewOutput: ViewOutput {
+protocol OptionSelectViewOutput: ViewOutput {
 
 }
