@@ -16,6 +16,9 @@
 		78F5781F24815C3000682508 /* TVShowListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5781E24815C3000682508 /* TVShowListViewInput.swift */; };
 		78F5782124815C4D00682508 /* TVShowListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5782024815C4D00682508 /* TVShowListViewOutput.swift */; };
 		78F5782424815E0F00682508 /* ViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5782324815E0F00682508 /* ViewOutput.swift */; };
+		78F57828248162ED00682508 /* AddTVShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F57827248162ED00682508 /* AddTVShowViewController.swift */; };
+		78F5782A248162FC00682508 /* AddTVShowViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F57829248162FC00682508 /* AddTVShowViewController.storyboard */; };
+		78F5782E2481646F00682508 /* AddTVShowViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5782D2481646F00682508 /* AddTVShowViewOutput.swift */; };
 		8A1770959AED90D2E365EEE4 /* Pods_TVShowManagerAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,9 @@
 		78F5781E24815C3000682508 /* TVShowListViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListViewInput.swift; sourceTree = "<group>"; };
 		78F5782024815C4D00682508 /* TVShowListViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListViewOutput.swift; sourceTree = "<group>"; };
 		78F5782324815E0F00682508 /* ViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutput.swift; sourceTree = "<group>"; };
+		78F57827248162ED00682508 /* AddTVShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowViewController.swift; sourceTree = "<group>"; };
+		78F57829248162FC00682508 /* AddTVShowViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTVShowViewController.storyboard; sourceTree = "<group>"; };
+		78F5782D2481646F00682508 /* AddTVShowViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowViewOutput.swift; sourceTree = "<group>"; };
 		89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManagerAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A9885E81885CBEB290BBFB /* Pods-TVShowManagerAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManagerAssignment.release.xcconfig"; path = "Target Support Files/Pods-TVShowManagerAssignment/Pods-TVShowManagerAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +154,8 @@
 		78F5780E24814FD900682508 /* Add TV Show */ = {
 			isa = PBXGroup;
 			children = (
+				78F57826248162D100682508 /* Protocols */,
+				78F57825248162B600682508 /* View */,
 			);
 			path = "Add TV Show";
 			sourceTree = "<group>";
@@ -194,6 +202,23 @@
 				78F5782324815E0F00682508 /* ViewOutput.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		78F57825248162B600682508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				78F57827248162ED00682508 /* AddTVShowViewController.swift */,
+				78F57829248162FC00682508 /* AddTVShowViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78F57826248162D100682508 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				78F5782D2481646F00682508 /* AddTVShowViewOutput.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F5782A248162FC00682508 /* AddTVShowViewController.storyboard in Resources */,
 				78F578142481508200682508 /* TVShowCell.xib in Resources */,
 				78F577FF248145FE00682508 /* LaunchScreen.storyboard in Resources */,
 				78F577FC248145FE00682508 /* Assets.xcassets in Resources */,
@@ -313,10 +339,12 @@
 			files = (
 				78F578122481507300682508 /* TVShowCell.swift in Sources */,
 				78F577F3248145FD00682508 /* AppDelegate.swift in Sources */,
+				78F5782E2481646F00682508 /* AddTVShowViewOutput.swift in Sources */,
 				78F5782124815C4D00682508 /* TVShowListViewOutput.swift in Sources */,
 				78F5782424815E0F00682508 /* ViewOutput.swift in Sources */,
 				78F5781F24815C3000682508 /* TVShowListViewInput.swift in Sources */,
 				78F5781724815A4100682508 /* TVShowListViewController.swift in Sources */,
+				78F57828248162ED00682508 /* AddTVShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
