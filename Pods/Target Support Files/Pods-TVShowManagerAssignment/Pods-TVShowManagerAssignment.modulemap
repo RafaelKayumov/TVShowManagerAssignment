@@ -1,0 +1,6 @@
+framework module Pods_TVShowManagerAssignment {
+  umbrella header "Pods-TVShowManagerAssignment-umbrella.h"
+
+  export *
+  module * { export * }
+}
