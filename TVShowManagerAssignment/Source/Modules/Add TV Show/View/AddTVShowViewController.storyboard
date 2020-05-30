@@ -21,17 +21,17 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-gd-Nwg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of release" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJ5-Ht-VIw">
                                         <rect key="frame" x="0.0" y="49" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of seasons" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="obu-9M-rco">
                                         <rect key="frame" x="0.0" y="98" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-Db-Zir">
                                         <rect key="frame" x="0.0" y="147" width="374" height="40"/>
@@ -40,6 +40,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="onSave" destination="dKo-K1-OKj" eventType="touchUpInside" id="huw-Xt-k7U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -57,10 +60,28 @@
                         <outlet property="numberOfSeasonsTextField" destination="obu-9M-rco" id="Zp6-Dr-Umz"/>
                         <outlet property="releaseYearTextField" destination="rJ5-Ht-VIw" id="k6t-tw-jLv"/>
                         <outlet property="saveButton" destination="fQs-Db-Zir" id="V7S-y1-pbx"/>
+                        <outlet property="seasonCountPicker" destination="Kus-i1-FsH" id="Vvc-Y8-KwY"/>
                         <outlet property="titleTextField" destination="Sv1-gd-Nwg" id="ko7-fh-dd7"/>
+                        <outlet property="yearPicker" destination="3ob-yf-cxN" id="JIM-jO-SfE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4W7-wt-O4r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="Kus-i1-FsH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="dKo-K1-OKj" id="AKc-QI-aqh"/>
+                        <outlet property="delegate" destination="dKo-K1-OKj" id="und-1Q-GML"/>
+                    </connections>
+                </pickerView>
+                <pickerView contentMode="scaleToFill" id="3ob-yf-cxN">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outlet property="dataSource" destination="dKo-K1-OKj" id="bdh-78-GTN"/>
+                        <outlet property="delegate" destination="dKo-K1-OKj" id="bvR-9o-lRr"/>
+                    </connections>
+                </pickerView>
             </objects>
             <point key="canvasLocation" x="221.73913043478262" y="7.3660714285714279"/>
         </scene>

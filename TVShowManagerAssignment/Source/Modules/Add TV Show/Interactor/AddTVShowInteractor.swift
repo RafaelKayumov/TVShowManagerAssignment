@@ -21,4 +21,8 @@ extension AddTVShowInteractor: AddTVShowViewOutput {
     func onViewReady() {
 
     }
+
+    func onTVShowSave(tvShowModel: TVShowViewModel) {
+
+    }
 }

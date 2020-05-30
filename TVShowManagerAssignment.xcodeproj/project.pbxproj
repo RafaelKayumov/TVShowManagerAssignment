@@ -30,6 +30,7 @@
 		78F5784F2482649700682508 /* OptionSelectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5784E2482649700682508 /* OptionSelectInteractor.swift */; };
 		78F57852248271E700682508 /* AddTVShowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F57851248271E700682508 /* AddTVShowInteractor.swift */; };
 		78F57855248272D700682508 /* TVShowListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F57854248272D700682508 /* TVShowListInteractor.swift */; };
+		78F57858248275A000682508 /* TVShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F57857248275A000682508 /* TVShowViewModel.swift */; };
 		8A1770959AED90D2E365EEE4 /* Pods_TVShowManagerAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		78F5784E2482649700682508 /* OptionSelectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectInteractor.swift; sourceTree = "<group>"; };
 		78F57851248271E700682508 /* AddTVShowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowInteractor.swift; sourceTree = "<group>"; };
 		78F57854248272D700682508 /* TVShowListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListInteractor.swift; sourceTree = "<group>"; };
+		78F57857248275A000682508 /* TVShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowViewModel.swift; sourceTree = "<group>"; };
 		89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManagerAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A9885E81885CBEB290BBFB /* Pods-TVShowManagerAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManagerAssignment.release.xcconfig"; path = "Target Support Files/Pods-TVShowManagerAssignment/Pods-TVShowManagerAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 		78F57806248146E100682508 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				78F578562482758C00682508 /* Models */,
 				78F57848248258FE00682508 /* Router */,
 				78F578452482427A00682508 /* Utils */,
 				78F5783A24823EF900682508 /* Assembly */,
@@ -334,6 +337,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		78F578562482758C00682508 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				78F57857248275A000682508 /* TVShowViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -461,6 +472,7 @@
 				78F57855248272D700682508 /* TVShowListInteractor.swift in Sources */,
 				78F5782424815E0F00682508 /* ViewOutput.swift in Sources */,
 				78F5784A2482590B00682508 /* Router.swift in Sources */,
+				78F57858248275A000682508 /* TVShowViewModel.swift in Sources */,
 				78F5781F24815C3000682508 /* TVShowListViewInput.swift in Sources */,
 				78F5781724815A4100682508 /* TVShowListViewController.swift in Sources */,
 				78F5784F2482649700682508 /* OptionSelectInteractor.swift in Sources */,
