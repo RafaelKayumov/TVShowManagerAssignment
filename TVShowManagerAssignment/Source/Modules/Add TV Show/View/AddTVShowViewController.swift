@@ -124,6 +124,17 @@ extension AddTVShowViewController: UITextFieldDelegate {
         releaseYearTextField.becomeFirstResponder()
         return false
     }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case releaseYearTextField:
+            pickerView(yearPicker, didSelectRow: yearPicker.selectedRow(inComponent: 0), inComponent: 0)
+        case numberOfSeasonsTextField:
+            pickerView(seasonCountPicker, didSelectRow: seasonCountPicker.selectedRow(inComponent: 0), inComponent: 0)
+        default:
+            return
+        }
+    }
 }
 
 extension AddTVShowViewController: AddTVShowViewInput {
