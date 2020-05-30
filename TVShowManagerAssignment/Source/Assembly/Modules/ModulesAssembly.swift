@@ -29,7 +29,7 @@ class ModulesAssembly: ModulesAssemblyProtocol {
     func addTVShowModule() -> UIViewController {
         let view = AddTVShowViewController.instantiate()
         let parseService = serviceAssembly.parseService()
-        let module = AddTVShowInteractor(router: router, parseService: parseService)
+        let module = AddTVShowInteractor(router: router, parseService: parseService, view: view)
 
         view.output = module
 

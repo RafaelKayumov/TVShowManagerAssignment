@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
     private(set) var rootNavigationController: UINavigationController?
     private let applicationAssembly = ApplicationAssembly()
     private let serviceAssembly = ServiceAssembly()
@@ -28,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootNavigationController.viewControllers = [optionSelectModule]
 
         applicationAssembly.setupUIStack()
+        window = applicationAssembly.window
 
         return true
     }

@@ -7,6 +7,7 @@ inhibit_all_warnings!
 
 def install_pods
   pod 'Parse'
+  pod 'SVProgressHUD'
 end
 
 target 'TVShowManagerAssignment' do

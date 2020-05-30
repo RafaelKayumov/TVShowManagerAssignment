@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 protocol Router: class {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
@@ -14,6 +15,20 @@ protocol Router: class {
 
     func displayAlert(title: String?, message: String?)
     func displayError(error: Error)
+}
+
+extension Router {
+    func displayProgress() {
+        SVProgressHUD.show()
+    }
+
+    func dismissProgress() {
+        SVProgressHUD.dismiss()
+    }
+
+    func displaySuccess() {
+        SVProgressHUD.showSuccess(withStatus: "Created")
+    }
 }
 
 extension UINavigationController: Router {}

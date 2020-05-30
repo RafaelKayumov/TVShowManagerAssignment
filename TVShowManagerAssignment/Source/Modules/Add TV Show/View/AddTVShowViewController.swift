@@ -125,3 +125,9 @@ extension AddTVShowViewController: UITextFieldDelegate {
         return false
     }
 }
+
+extension AddTVShowViewController: AddTVShowViewInput {
+    func endEditing() {
+        view.endEditing(true)
+    }
+}

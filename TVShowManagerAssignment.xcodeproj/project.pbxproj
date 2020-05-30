@@ -38,6 +38,7 @@
 		78F578642482BCA600682508 /* ServiceAssemblyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578632482BCA600682508 /* ServiceAssemblyProtocol.swift */; };
 		78F578662482C2C200682508 /* Codable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578652482C2C200682508 /* Codable+Additions.swift */; };
 		78F578682482C3C100682508 /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578672482C3C100682508 /* UIViewController+Error.swift */; };
+		78F5786C2482CDCC00682508 /* AddTVShowViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5786B2482CDCC00682508 /* AddTVShowViewInput.swift */; };
 		8A1770959AED90D2E365EEE4 /* Pods_TVShowManagerAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		78F578632482BCA600682508 /* ServiceAssemblyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssemblyProtocol.swift; sourceTree = "<group>"; };
 		78F578652482C2C200682508 /* Codable+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Additions.swift"; sourceTree = "<group>"; };
 		78F578672482C3C100682508 /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
+		78F5786B2482CDCC00682508 /* AddTVShowViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowViewInput.swift; sourceTree = "<group>"; };
 		89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManagerAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A9885E81885CBEB290BBFB /* Pods-TVShowManagerAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManagerAssignment.release.xcconfig"; path = "Target Support Files/Pods-TVShowManagerAssignment/Pods-TVShowManagerAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				78F5782D2481646F00682508 /* AddTVShowViewOutput.swift */,
+				78F5786B2482CDCC00682508 /* AddTVShowViewInput.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				78F57855248272D700682508 /* TVShowListInteractor.swift in Sources */,
 				78F5782424815E0F00682508 /* ViewOutput.swift in Sources */,
 				78F5785B2482B03A00682508 /* ParseService.swift in Sources */,
+				78F5786C2482CDCC00682508 /* AddTVShowViewInput.swift in Sources */,
 				78F5785D2482B05E00682508 /* ParseService+Setup.swift in Sources */,
 				78F5784A2482590B00682508 /* Router.swift in Sources */,
 				78F57858248275A000682508 /* TVShowViewModel.swift in Sources */,

@@ -11,10 +11,12 @@ import Foundation
 class AddTVShowInteractor {
     private let router: Router
     private let parseService: ParseServiceProtocol
+    private unowned let view: AddTVShowViewInput
 
-    init(router: Router, parseService: ParseServiceProtocol) {
+    init(router: Router, parseService: ParseServiceProtocol, view: AddTVShowViewInput) {
         self.router = router
         self.parseService = parseService
+        self.view = view
     }
 }
 
@@ -40,14 +42,26 @@ private extension AddTVShowInteractor {
 
     func saveTVShow(model: TVShowViewModel) {
         guard let dictionary = model.dictionary else { return }
+
+        router.displayProgress()
+
         parseService.saveObject(objectDictionary: dictionary, type: .tvShow) { (_, error) in
-            guard error == nil else {
-                DispatchQueue.main.async { [weak self] in
+            DispatchQueue.main.async { [weak self] in
+                self?.router.dismissProgress()
+
+                guard error == nil else {
                     self?.router.displayError(error: error!)
+                    return
                 }
-                return
+
+                self?.dismiss()
+                self?.router.displaySuccess()
             }
         }
+    }
+
+    func dismiss() {
+        _ = router.popViewController(animated: true)
     }
 }
 
@@ -59,5 +73,6 @@ extension AddTVShowInteractor: AddTVShowViewOutput {
 
     func onTVShowSaveWith(title: String?, yearOfRelease: String?, numberOfSeasons: String?) {
         validateAndSaveTVShowWith(title: title, yearOfRelease: yearOfRelease, numberOfSeasons: numberOfSeasons)
+        view.endEditing()
     }
 }
