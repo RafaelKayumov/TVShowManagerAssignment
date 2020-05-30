@@ -17,6 +17,7 @@ class AddTVShowViewController: UIViewController, StoryboardBased {
 
     @IBOutlet private weak var yearPicker: UIPickerView!
     @IBOutlet private weak var seasonCountPicker: UIPickerView!
+    @IBOutlet private weak var inputAccessoryToolbar: UIToolbar?
 
     private let years: [Int] = {
         let components = Calendar.current.dateComponents([.year], from: Date())
@@ -32,12 +33,19 @@ class AddTVShowViewController: UIViewController, StoryboardBased {
 
         setupYearPicker()
         setupSeasonCountPicker()
+        setupInputAccessory()
 
         output.onViewReady()
     }
 }
 
 private extension AddTVShowViewController {
+
+    func setupInputAccessory() {
+        releaseYearTextField.inputAccessoryView = inputAccessoryToolbar
+        numberOfSeasonsTextField.inputAccessoryView = inputAccessoryToolbar
+        titleTextField.inputAccessoryView = inputAccessoryToolbar
+    }
 
     func setupYearPicker() {
         releaseYearTextField.inputView = yearPicker
@@ -57,6 +65,10 @@ private extension AddTVShowViewController {
 
     @IBAction func onSave() {
         saveTVShowInput()
+    }
+
+    @IBAction func onEndEditing() {
+        self.view.endEditing(true)
     }
 }
 
@@ -100,5 +112,14 @@ extension AddTVShowViewController: UIPickerViewDelegate {
         default:
             return
         }
+    }
+}
+
+extension AddTVShowViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard textField == titleTextField else { return true }
+        releaseYearTextField.becomeFirstResponder()
+        return false
     }
 }

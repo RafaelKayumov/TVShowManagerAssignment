@@ -21,17 +21,26 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sv1-gd-Nwg">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="dKo-K1-OKj" id="Pk1-xY-E4P"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of release" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJ5-Ht-VIw">
                                         <rect key="frame" x="0.0" y="49" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="dKo-K1-OKj" id="p1A-kp-oYV"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of seasons" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="obu-9M-rco">
                                         <rect key="frame" x="0.0" y="98" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="dKo-K1-OKj" id="Sfo-J4-KYv"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-Db-Zir">
                                         <rect key="frame" x="0.0" y="147" width="374" height="40"/>
@@ -57,6 +66,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="inputAccessoryToolbar" destination="9dg-b6-4rF" id="0PC-uw-OtG"/>
                         <outlet property="numberOfSeasonsTextField" destination="obu-9M-rco" id="Zp6-Dr-Umz"/>
                         <outlet property="releaseYearTextField" destination="rJ5-Ht-VIw" id="k6t-tw-jLv"/>
                         <outlet property="saveButton" destination="fQs-Db-Zir" id="V7S-y1-pbx"/>
@@ -82,6 +92,18 @@
                         <outlet property="delegate" destination="dKo-K1-OKj" id="bvR-9o-lRr"/>
                     </connections>
                 </pickerView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9dg-b6-4rF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="H6h-1d-gke"/>
+                        <barButtonItem title="Done" id="09R-py-0Pb">
+                            <connections>
+                                <action selector="onEndEditing" destination="dKo-K1-OKj" id="Jh4-NB-9pa"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="221.73913043478262" y="7.3660714285714279"/>
         </scene>
