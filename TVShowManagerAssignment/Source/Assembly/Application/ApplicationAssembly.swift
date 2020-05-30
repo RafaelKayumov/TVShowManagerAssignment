@@ -11,17 +11,14 @@ import UIKit
 class ApplicationAssembly {
 
     private(set) var window: UIWindow?
-    private(set) var rootNavigationController: UINavigationController?
+    private(set) var rootNavigationController = UINavigationController()
 
     func setupUIStack() {
         let window = UIWindow()
         window.backgroundColor = UIColor.white
-
-        let navigationController = UINavigationController()
-        window.rootViewController = navigationController
+        window.rootViewController = rootNavigationController
         window.makeKeyAndVisible()
 
         self.window = window
-        self.rootNavigationController = navigationController
     }
 }

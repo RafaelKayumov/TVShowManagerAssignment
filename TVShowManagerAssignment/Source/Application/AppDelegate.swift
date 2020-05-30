@@ -16,12 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var modulesAssembly: ModulesAssemblyProtocol!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        applicationAssembly.setupUIStack()
-        let rootNavigationController = applicationAssembly.rootNavigationController!
+
+        let rootNavigationController = applicationAssembly.rootNavigationController
         modulesAssembly = ModulesAssembly(router: rootNavigationController)
 
         let optionSelectModule = modulesAssembly.optionSelectModule()
         rootNavigationController.viewControllers = [optionSelectModule]
+
+        applicationAssembly.setupUIStack()
 
         return true
     }
