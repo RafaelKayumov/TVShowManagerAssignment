@@ -10,4 +10,6 @@ import Foundation
 
 protocol OptionSelectViewOutput: ViewOutput {
 
+    func onAddNewTVShow()
+    func onTVShowList()
 }

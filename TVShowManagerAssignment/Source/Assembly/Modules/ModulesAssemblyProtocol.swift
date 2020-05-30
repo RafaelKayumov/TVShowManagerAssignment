@@ -11,4 +11,6 @@ import UIKit
 protocol ModulesAssemblyProtocol {
 
     func optionSelectModule() -> UIViewController
+    func addTVShowModule() -> UIViewController
+    func tvShowsListModule() -> UIViewController
 }

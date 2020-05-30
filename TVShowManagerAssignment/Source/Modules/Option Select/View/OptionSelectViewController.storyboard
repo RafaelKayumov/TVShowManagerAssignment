@@ -25,6 +25,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Add new TV show"/>
+                                        <connections>
+                                            <action selector="onAddNewTVShow" destination="9Nz-97-tNM" eventType="touchUpInside" id="Um9-4f-4wV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqX-Ae-bXN">
                                         <rect key="frame" x="0.0" y="60" width="374" height="50"/>
@@ -33,6 +36,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Show list of added shows"/>
+                                        <connections>
+                                            <action selector="onTVShowList" destination="9Nz-97-tNM" eventType="touchUpInside" id="01u-AZ-cTv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

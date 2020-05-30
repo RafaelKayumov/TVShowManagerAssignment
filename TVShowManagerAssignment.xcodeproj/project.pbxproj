@@ -28,6 +28,8 @@
 		78F578472482429800682508 /* StoryboardBased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578462482429800682508 /* StoryboardBased.swift */; };
 		78F5784A2482590B00682508 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578492482590B00682508 /* Router.swift */; };
 		78F5784F2482649700682508 /* OptionSelectInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5784E2482649700682508 /* OptionSelectInteractor.swift */; };
+		78F57852248271E700682508 /* AddTVShowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F57851248271E700682508 /* AddTVShowInteractor.swift */; };
+		78F57855248272D700682508 /* TVShowListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F57854248272D700682508 /* TVShowListInteractor.swift */; };
 		8A1770959AED90D2E365EEE4 /* Pods_TVShowManagerAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		78F578462482429800682508 /* StoryboardBased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBased.swift; sourceTree = "<group>"; };
 		78F578492482590B00682508 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		78F5784E2482649700682508 /* OptionSelectInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionSelectInteractor.swift; sourceTree = "<group>"; };
+		78F57851248271E700682508 /* AddTVShowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowInteractor.swift; sourceTree = "<group>"; };
+		78F57854248272D700682508 /* TVShowListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListInteractor.swift; sourceTree = "<group>"; };
 		89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManagerAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A9885E81885CBEB290BBFB /* Pods-TVShowManagerAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManagerAssignment.release.xcconfig"; path = "Target Support Files/Pods-TVShowManagerAssignment/Pods-TVShowManagerAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,7 @@
 		78F5780E24814FD900682508 /* Add TV Show */ = {
 			isa = PBXGroup;
 			children = (
+				78F57850248271C100682508 /* Interactor */,
 				78F57826248162D100682508 /* Protocols */,
 				78F57825248162B600682508 /* View */,
 			);
@@ -187,6 +192,7 @@
 		78F5780F24814FE400682508 /* TV Show List */ = {
 			isa = PBXGroup;
 			children = (
+				78F57853248272C000682508 /* Interactor */,
 				78F5781B24815ADD00682508 /* Protocols */,
 				78F578102481505600682508 /* View */,
 			);
@@ -308,6 +314,22 @@
 			isa = PBXGroup;
 			children = (
 				78F5784E2482649700682508 /* OptionSelectInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		78F57850248271C100682508 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				78F57851248271E700682508 /* AddTVShowInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		78F57853248272C000682508 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				78F57854248272D700682508 /* TVShowListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -436,12 +458,14 @@
 				78F5782124815C4D00682508 /* TVShowListViewOutput.swift in Sources */,
 				78F578402482409C00682508 /* ApplicationAssembly.swift in Sources */,
 				78F57838248168E200682508 /* OptionSelectViewOutput.swift in Sources */,
+				78F57855248272D700682508 /* TVShowListInteractor.swift in Sources */,
 				78F5782424815E0F00682508 /* ViewOutput.swift in Sources */,
 				78F5784A2482590B00682508 /* Router.swift in Sources */,
 				78F5781F24815C3000682508 /* TVShowListViewInput.swift in Sources */,
 				78F5781724815A4100682508 /* TVShowListViewController.swift in Sources */,
 				78F5784F2482649700682508 /* OptionSelectInteractor.swift in Sources */,
 				78F578442482418A00682508 /* ModulesAssembly.swift in Sources */,
+				78F57852248271E700682508 /* AddTVShowInteractor.swift in Sources */,
 				78F57828248162ED00682508 /* AddTVShowViewController.swift in Sources */,
 				78F578472482429800682508 /* StoryboardBased.swift in Sources */,
 				78F578342481662400682508 /* OptionSelectViewController.swift in Sources */,

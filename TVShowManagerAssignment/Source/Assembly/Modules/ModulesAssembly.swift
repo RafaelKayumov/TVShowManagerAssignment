@@ -9,7 +9,6 @@
 import UIKit
 
 class ModulesAssembly: ModulesAssemblyProtocol {
-
     private let router: Router
 
     init(router: Router) {
@@ -18,7 +17,25 @@ class ModulesAssembly: ModulesAssemblyProtocol {
 
     func optionSelectModule() -> UIViewController {
         let view = OptionSelectViewController.instantiate()
-        let module = OptionSelectInteractor(router: self.router)
+        let module = OptionSelectInteractor(router: router, modulesAssembly: self)
+
+        view.output = module
+
+        return view
+    }
+
+    func addTVShowModule() -> UIViewController {
+        let view = AddTVShowViewController.instantiate()
+        let module = AddTVShowInteractor(router: router)
+
+        view.output = module
+
+        return view
+    }
+
+    func tvShowsListModule() -> UIViewController {
+        let view = TVShowListViewController()
+        let module = TVShowListInteractor(router: router)
 
         view.output = module
 

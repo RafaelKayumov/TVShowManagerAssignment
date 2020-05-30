@@ -13,12 +13,22 @@ class OptionSelectViewController: UIViewController, StoryboardBased {
     @IBOutlet private weak var addNewTVShowButton: UIButton!
     @IBOutlet private weak var tvShowsListButton: UIButton!
 
-    weak var router: Router?
+    var router: Router?
     var output: OptionSelectViewOutput!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         output.onViewReady()
+    }
+}
+
+private extension OptionSelectViewController {
+    @IBAction func onAddNewTVShow() {
+        output.onAddNewTVShow()
+    }
+
+    @IBAction func onTVShowList() {
+        output.onTVShowList()
     }
 }
