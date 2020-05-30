@@ -10,7 +10,7 @@
         <!--TV Shows Manager-->
         <scene sceneID="TL6-Hm-9VW">
             <objects>
-                <viewController title="TV Shows Manager" id="9Nz-97-tNM" customClass="OptionSelectViewController" customModule="TVShowManagerAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OptionSelectViewController" title="TV Shows Manager" id="9Nz-97-tNM" customClass="OptionSelectViewController" customModule="TVShowManagerAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PTI-QK-u8b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

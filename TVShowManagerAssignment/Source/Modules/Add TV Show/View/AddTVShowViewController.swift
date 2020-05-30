@@ -8,14 +8,15 @@
 
 import UIKit
 
-class AddTVShowViewController: UIViewController {
+class AddTVShowViewController: UIViewController, StoryboardBased {
 
     @IBOutlet private weak var titleTextField: UITextField!
     @IBOutlet private weak var releaseYearTextField: UITextField!
     @IBOutlet private weak var numberOfSeasonsTextField: UITextField!
     @IBOutlet private weak var saveButton: UIButton!
 
-    var output: AddTVShowViewOutput!
+    weak var router: Router?
+    weak var output: AddTVShowViewOutput!
 
     override func viewDidLoad() {
         super.viewDidLoad()

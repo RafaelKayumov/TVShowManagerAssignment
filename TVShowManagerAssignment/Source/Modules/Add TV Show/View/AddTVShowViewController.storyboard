@@ -10,7 +10,7 @@
         <!--Add new TV show-->
         <scene sceneID="Nyk-Bw-9FB">
             <objects>
-                <viewController title="Add new TV show" id="dKo-K1-OKj" customClass="AddTVShowViewController" customModule="TVShowManagerAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTVShowViewController" title="Add new TV show" id="dKo-K1-OKj" customClass="AddTVShowViewController" customModule="TVShowManagerAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fe7-jm-ZW2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

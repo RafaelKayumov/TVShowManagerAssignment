@@ -8,11 +8,12 @@
 
 import UIKit
 
-class OptionSelectViewController: UIViewController {
+class OptionSelectViewController: UIViewController, StoryboardBased {
 
     @IBOutlet private weak var addNewTVShowButton: UIButton!
     @IBOutlet private weak var tvShowsListButton: UIButton!
 
+    weak var router: Router?
     var output: OptionSelectViewOutput!
 
     override func viewDidLoad() {

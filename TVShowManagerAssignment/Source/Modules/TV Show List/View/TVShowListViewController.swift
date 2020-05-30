@@ -10,6 +10,7 @@ import UIKit
 
 class TVShowListViewController: UITableViewController {
 
+    weak var router: Router?
     weak var output: TVShowListViewOutput!
 
     override func viewDidLoad() {
