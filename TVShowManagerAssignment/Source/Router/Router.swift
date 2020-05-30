@@ -11,6 +11,9 @@ import UIKit
 protocol Router: class {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
     func popViewController(animated: Bool) -> UIViewController?
+
+    func displayAlert(title: String?, message: String?)
+    func displayError(error: Error)
 }
 
 extension UINavigationController: Router {}

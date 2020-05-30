@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct TVShowViewModel {
-    let title: String?
-    let yearOfRelease: String?
-    let numberOfSeasons: String?
+struct TVShowViewModel: Encodable {
+    let title: String
+    let yearOfRelease: String
+    let numberOfSeasons: String
 }

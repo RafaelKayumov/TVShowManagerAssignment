@@ -10,5 +10,5 @@ import Foundation
 
 protocol AddTVShowViewOutput: ViewOutput {
 
-    func onTVShowSave(tvShowModel: TVShowViewModel)
+    func onTVShowSaveWith(title: String?, yearOfRelease: String?, numberOfSeasons: String?)
 }

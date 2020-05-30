@@ -56,8 +56,10 @@ private extension AddTVShowViewController {
     }
 
     func saveTVShowInput() {
-        let tvShowModel = TVShowViewModel(title: titleTextField.text, yearOfRelease: releaseYearTextField.text, numberOfSeasons: numberOfSeasonsTextField.text)
-        output.onTVShowSave(tvShowModel: tvShowModel)
+        let title = titleTextField.text
+        let yearOfRelease = releaseYearTextField.text
+        let numberOfSeasons = numberOfSeasonsTextField.text
+        output.onTVShowSaveWith(title: title, yearOfRelease: yearOfRelease, numberOfSeasons: numberOfSeasons)
     }
 }
 
