@@ -6,6 +6,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 def install_pods
+  pod 'Parse'
 end
 
 target 'TVShowManagerAssignment' do
