@@ -13,12 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private(set) var rootNavigationController: UINavigationController?
     private let applicationAssembly = ApplicationAssembly()
+    private let serviceAssembly = ServiceAssembly()
     private var modulesAssembly: ModulesAssemblyProtocol!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        //setup Parse SDK
+        ParseService.setup()
 
+        //setup UI stack
         let rootNavigationController = applicationAssembly.rootNavigationController
-        modulesAssembly = ModulesAssembly(router: rootNavigationController)
+        modulesAssembly = ModulesAssembly(router: rootNavigationController, serviceAssembly: serviceAssembly)
 
         let optionSelectModule = modulesAssembly.optionSelectModule()
         rootNavigationController.viewControllers = [optionSelectModule]

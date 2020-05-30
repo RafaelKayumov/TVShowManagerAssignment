@@ -10,9 +10,11 @@ import UIKit
 
 class ModulesAssembly: ModulesAssemblyProtocol {
     private let router: Router
+    private let serviceAssembly: ServiceAssemblyProtocol
 
-    init(router: Router) {
+    init(router: Router, serviceAssembly: ServiceAssemblyProtocol) {
         self.router = router
+        self.serviceAssembly = serviceAssembly
     }
 
     func optionSelectModule() -> UIViewController {
@@ -26,7 +28,8 @@ class ModulesAssembly: ModulesAssemblyProtocol {
 
     func addTVShowModule() -> UIViewController {
         let view = AddTVShowViewController.instantiate()
-        let module = AddTVShowInteractor(router: router)
+        let parseService = serviceAssembly.parseService()
+        let module = AddTVShowInteractor(router: router, parseService: parseService)
 
         view.output = module
 
