@@ -9,15 +9,19 @@
 import Parse
 
 class ParseService: ParseServiceProtocol {
-    func saveObject(objectDictionary: [String: Any], type: ParseObjectType, completion: @escaping ParseCallback) {
-        let objectToSave = PFObject(className: type.rawValue, dictionary: objectDictionary)
-        objectToSave.saveInBackground { (success, error) in
+    func saveObject(object: PFObject, completion: @escaping ParseCallback) {
+        object.saveInBackground { (success, error) in
             guard success, error == nil else {
                 completion(false, error)
                 return
             }
             completion(true, nil)
         }
+    }
+
+    func saveObject(objectDictionary: [String: Any], type: ParseObjectType, completion: @escaping ParseCallback) {
+        let objectToSave = PFObject(className: type.rawValue, dictionary: objectDictionary)
+        saveObject(object: objectToSave, completion: completion)
     }
 
     func deleteObjectWith(type: ParseObjectType, id: String, completion: @escaping ParseCallback) {
@@ -35,7 +39,7 @@ class ParseService: ParseServiceProtocol {
 
     func queryObjectsWith(type: ParseObjectType, completion: @escaping ParseCollectionFetchCallback) {
         let query = PFQuery(className: type.rawValue)
-        query.order(byAscending: "createdAt")
+        query.order(byDescending: "createdAt")
         query.findObjectsInBackground(block: completion)
     }
 }

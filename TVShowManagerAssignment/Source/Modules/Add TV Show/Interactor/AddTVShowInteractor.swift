@@ -41,11 +41,9 @@ private extension AddTVShowInteractor {
     }
 
     func saveTVShow(model: TVShowViewModel) {
-        guard let dictionary = model.dictionary else { return }
-
         router.displayProgress()
 
-        parseService.saveObject(objectDictionary: dictionary, type: .tvShow) { (_, error) in
+        parseService.saveObject(object: model.parseObject) { (_, error) in
             DispatchQueue.main.async { [weak self] in
                 self?.router.dismissProgress()
 

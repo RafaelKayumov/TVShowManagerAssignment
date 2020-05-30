@@ -39,6 +39,7 @@
 		78F578662482C2C200682508 /* Codable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578652482C2C200682508 /* Codable+Additions.swift */; };
 		78F578682482C3C100682508 /* UIViewController+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F578672482C3C100682508 /* UIViewController+Error.swift */; };
 		78F5786C2482CDCC00682508 /* AddTVShowViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F5786B2482CDCC00682508 /* AddTVShowViewInput.swift */; };
+		78F5786E2482E02700682508 /* NoResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F5786D2482E02700682508 /* NoResultsCell.xib */; };
 		8A1770959AED90D2E365EEE4 /* Pods_TVShowManagerAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		78F578652482C2C200682508 /* Codable+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Additions.swift"; sourceTree = "<group>"; };
 		78F578672482C3C100682508 /* UIViewController+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Error.swift"; sourceTree = "<group>"; };
 		78F5786B2482CDCC00682508 /* AddTVShowViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTVShowViewInput.swift; sourceTree = "<group>"; };
+		78F5786D2482E02700682508 /* NoResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoResultsCell.xib; sourceTree = "<group>"; };
 		89D9EF3FBDA63EB9DF95B8E8 /* Pods_TVShowManagerAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVShowManagerAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A9885E81885CBEB290BBFB /* Pods-TVShowManagerAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVShowManagerAssignment.release.xcconfig"; path = "Target Support Files/Pods-TVShowManagerAssignment/Pods-TVShowManagerAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 			children = (
 				78F578112481507300682508 /* TVShowCell.swift */,
 				78F578132481508200682508 /* TVShowCell.xib */,
+				78F5786D2482E02700682508 /* NoResultsCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				78F5782A248162FC00682508 /* AddTVShowViewController.storyboard in Resources */,
 				78F578142481508200682508 /* TVShowCell.xib in Resources */,
 				78F577FF248145FE00682508 /* LaunchScreen.storyboard in Resources */,
+				78F5786E2482E02700682508 /* NoResultsCell.xib in Resources */,
 				78F578362481668C00682508 /* OptionSelectViewController.storyboard in Resources */,
 				78F577FC248145FE00682508 /* Assets.xcassets in Resources */,
 			);

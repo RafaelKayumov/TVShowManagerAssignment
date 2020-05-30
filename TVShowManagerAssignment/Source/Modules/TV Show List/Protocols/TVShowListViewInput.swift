@@ -9,6 +9,6 @@
 import Foundation
 
 protocol TVShowListViewInput: class {
-    func reloadData()
-    func setNoResultsStatusDisplayed(_ displayed: Bool)
+    func consumeModels(_ models: [TVShowViewModel])
+    func displayEmptySate()
 }

@@ -9,5 +9,4 @@
 import Foundation
 
 protocol TVShowListViewOutput: ViewOutput {
-    func onCellSelectAtIndex(_ index: Int)
 }

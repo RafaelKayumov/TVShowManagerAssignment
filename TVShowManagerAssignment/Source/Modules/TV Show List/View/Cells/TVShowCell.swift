@@ -14,15 +14,11 @@ class TVShowCell: UITableViewCell {
     @IBOutlet private weak var releaseYearLabel: UILabel!
     @IBOutlet private weak var numberOfSeasonsLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var viewModel: TVShowViewModel? {
+        didSet {
+            titleLabel.text = viewModel?.title
+            releaseYearLabel.text = viewModel?.yearOfRelease
+            numberOfSeasonsLabel.text = viewModel?.numberOfSeasons
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

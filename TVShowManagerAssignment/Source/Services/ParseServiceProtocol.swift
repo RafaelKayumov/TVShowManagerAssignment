@@ -9,13 +9,14 @@
 import Parse
 
 enum ParseObjectType: String {
-    case tvShow
+    case tvShow = "TVShow"
 }
 
 typealias ParseCallback = (Bool, Error?) -> Void
 typealias ParseCollectionFetchCallback = ([PFObject]?, Error?) -> Void
 
 protocol ParseServiceProtocol {
+    func saveObject(object: PFObject, completion: @escaping ParseCallback)
     func saveObject(objectDictionary: [String: Any], type: ParseObjectType, completion: @escaping ParseCallback)
     func deleteObjectWith(type: ParseObjectType, id: String, completion: @escaping ParseCallback)
     func queryObjectsWith(type: ParseObjectType, completion: @escaping ParseCollectionFetchCallback)

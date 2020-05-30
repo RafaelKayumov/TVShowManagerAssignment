@@ -38,7 +38,9 @@ class ModulesAssembly: ModulesAssemblyProtocol {
 
     func tvShowsListModule() -> UIViewController {
         let view = TVShowListViewController()
-        let module = TVShowListInteractor(router: router)
+        view.title = "TV show list"
+        let parseService = serviceAssembly.parseService()
+        let module = TVShowListInteractor(router: router, parseService: parseService, view: view)
 
         view.output = module
 
