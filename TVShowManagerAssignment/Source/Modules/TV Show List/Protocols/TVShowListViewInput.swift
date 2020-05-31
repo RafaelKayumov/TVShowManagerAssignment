@@ -10,5 +10,4 @@ import Foundation
 
 protocol TVShowListViewInput: class {
     func consumeModels(_ models: [TVShowViewModel])
-    func displayEmptySate()
 }

@@ -43,16 +43,7 @@ private extension TVShowListInteractor {
     }
 
     func displayObjects(_ objects: [TVShowViewModel]) {
-        guard objects.isEmpty == false else {
-            displayEmptyState()
-            return
-        }
-
         view.consumeModels(objects)
-    }
-
-    func displayEmptyState() {
-        view.displayEmptySate()
     }
 }
 

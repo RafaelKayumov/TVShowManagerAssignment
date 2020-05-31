@@ -80,8 +80,4 @@ extension TVShowListViewController: TVShowListViewInput {
     func consumeModels(_ models: [TVShowViewModel]) {
         self.models = models
     }
-
-    func displayEmptySate() {
-
-    }
 }
